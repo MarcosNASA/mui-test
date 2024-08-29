@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-height: 100dvh;
+}
+
+.MuiFormControl-root {
+  width: 100%;
+
+  & input {
+    color: #aaaaaa;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    &:is(:focus, :hover) {
+      outline: 1px solid #aaaaaa;
+    }
+  }
+  & label {
+    color: #aaaaaa;
+  }
+
+  &:-webkit-autofill {
+    animation-name: onAutoFillStart;
+    transition: background-color 50000s ease-in-out 0s;
+  }
+
+  &:not(:-webkit-autofill) {
+    animation-name: onAutoFillCancel;
+  }
+}
